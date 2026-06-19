@@ -72,35 +72,24 @@ cp .env.example .env
 
 # 5. Execute
 python main.py
+
+# Opcional: simular sem enviar mensagens de verdade
+python main.py --dry-run
+
+# Opcional: limitar a N contatos (padrão: 3)
+python main.py --max 1
 ```
-
-## Publicar no GitHub
-
-1. Crie um repositório público no GitHub (ex.: `b2bflow-challenge`).
-2. No seu diretório local, inicialize o repositório, adicione arquivos e faça commit:
-
-```bash
-git init
-git add .
-git commit -m "feat: inicial - envia contatos Supabase via Z-API"
-# adicione o remote substituindo <URL> pelo repo que você criou
-git remote add origin <URL>
-git branch -M main
-git push -u origin main
-```
-
-Se preferir, me envie a URL remota ou um token de acesso (PAT) e eu posso tentar empurrar o repositório para você (requer permissão). Caso contrário, siga os comandos acima.
 
 ### Exemplo de saída esperada
 
 ```
-2025-06-19 10:00:00 [INFO] === Iniciando envio de mensagens ===
-2025-06-19 10:00:01 [INFO] Buscando contatos no Supabase...
-2025-06-19 10:00:01 [INFO] 3 contato(s) encontrado(s).
-2025-06-19 10:00:02 [INFO] Enviando mensagem para João Silva (5511999990001)...
-2025-06-19 10:00:02 [INFO] ✅ Mensagem enviada com sucesso para João Silva (5511999990001)
+2026-06-19 10:00:00 [INFO] === Iniciando envio de mensagens ===
+2026-06-19 10:00:01 [INFO] Buscando contatos no Supabase...
+2026-06-19 10:00:01 [INFO] 3 contato(s) encontrado(s).
+2026-06-19 10:00:02 [INFO] Enviando mensagem para João Silva (5511999990001)...
+2026-06-19 10:00:02 [INFO] ✅ Mensagem enviada com sucesso para João Silva (5511999990001)
 ...
-2025-06-19 10:00:04 [INFO] === Concluído | Enviados: 3 | Falhas: 0 ===
+2026-06-19 10:00:04 [INFO] === Concluído | Enviados: 3 | Falhas: 0 ===
 ```
 
 ---
